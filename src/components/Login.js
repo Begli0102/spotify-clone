@@ -40,36 +40,3 @@ const Login = () => {
 
 export default Login;
 
-// import styled, { css } from 'styled-components'
-
-// const AnimationContainer = styled.div`;
-//   transform: translate(0%);
-//   transition: 0.3s ease-out;
-
-//   ${props => props.animated && css`
-//     &:hover {
-//       position: fixed;
-//       transform: translate(0%, -30%);
-//       transition: 0.3s ease-out;
-//     }
-//   `}
-// `
-
-// export default AnimationContainer
-// And then you may use it like this:
-
-// import AnimationContainer from './path/to/AnimationContainer
-
-// // some component here…
-//   render() {
-//     return (
-//       <!-- some JSX element… -->
-//         <AnimationContainer animated>
-//           With animation
-//         </AnimationContainer>
-//         <AnimationContainer>
-//           Without animation
-//         </AnimationContainer>
-//       <!-- end of some JSX element… -->
-//     )
-//   }

@@ -23,38 +23,7 @@ function App() {
       }
     }
     document.title = "Spotify";
-    // const hash = getTokenFromResponse();
-    // window.location.hash = "";
-    // const _token = hash.access_token;
-    // if (_token) {
-    //   dispatch({
-    //     type: "SET_TOKEN",
-    //     token: _token
-    //   });
-
-    //   spotify.setAccessToken(_token); //gives the token to spotify
-    //   spotify.getMe().then((user) => {
-    //     dispatch({
-    //       type: "SET_USER",
-    //       user: user
-    //     });
-    //     console.log(user);
-    //   });
-
-    //   spotify.getUserPlaylists().then((playlists) => {
-    //     dispatch({
-    //       type: "SET_PLAYLISTS",
-    //       playlists: playlists
-    //     });
-    //   });
-
-    //   spotify.getPlaylist("5G95MLnl4Grtabu7EJDzXP").then((response) =>
-    //     dispatch({
-    //       type: "SET_DISCOVER_WEEKLY",
-    //       discover_weekly: response
-    //     })
-    //   );
-    //  }
+    
   }, [token, dispatch]);
 
   return <Container>{token ? <Player /> : <Login />}</Container>;

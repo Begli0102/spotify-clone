@@ -1,11 +1,13 @@
 export const initialState = {
   user: null,
   playlists: [],
-  selectedPlaylistId: "3E5t91OchBvMviCfgknGXs"
+  selectedPlaylistId: "4jVvhTA6Xf56C1uBR48HVF",
+  selectedPlaylist: null,
+  currentlyPlaying: null
 };
 
 const SpotifyReducer = (state, action) => {
-  // console.log(action);
+  //  console.log(action);
   switch (action.type) {
     case "SET_USER":
       return {
@@ -27,6 +29,16 @@ const SpotifyReducer = (state, action) => {
       return {
         ...state,
         selectedPlaylist: action.selectedPlaylist
+      };
+    case "SET_PLAYLIST_ID":
+      return {
+        ...state,
+        selectedPlaylistId: action.selectedPlaylistId
+      };
+    case "SET_PLAYING":
+      return {
+        ...state,
+        currentlyPlaying: action.currentlyPlaying
       };
 
     default:

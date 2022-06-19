@@ -17,6 +17,7 @@ const Container = styled.div`
     width: 120px;
     padding: 2px;
     cursor: pointer;
+    position: sticky;
   }
 
   p {
@@ -37,22 +38,26 @@ const Header = () => {
           "Content-Type": "application/json"
         }
       });
-      const user = response.data;
-
+      const user = {
+        userId: response.data.id,
+        userUrl: response.data.images[0].url,
+        name: response.data.display_name
+      };
+      console.log(user);
       dispatch({ type: "SET_USER", user });
     };
     getUser();
-  }, [dispatch, token]);
+  }, [token, dispatch]);
 
   return (
     <Container>
       <div className="right">
         <Avatar
-          src={user?.images[0].url}
-          alt={user?.display_name}
+          src={user?.userUrl}
+          alt={user?.userUrl}
           style={{ height: "30px", width: "30px", objectFit: "contain" }}
         />
-        <p>{user?.display_name}</p>
+        <p>{user?.name}</p>
       </div>
     </Container>
   );

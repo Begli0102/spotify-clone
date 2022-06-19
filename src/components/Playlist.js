@@ -47,12 +47,6 @@ export const PlayList = () => {
         }
       );
       const playlists = response.data.items;
-    
-      // const items = response.data.items;
-      // console.log(items, "hello");
-      // const playlists = items.map(({ name, id }) => {
-      //   return { name, id };
-      // });
 
       dispatch({ type: "SET_PLAYLISTS", playlists });
     };
